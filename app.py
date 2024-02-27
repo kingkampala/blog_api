@@ -3,9 +3,11 @@ import psycopg2
 from dotenv import load_dotenv
 from flask import Flask
 from flask_cors import CORS
+
 from routes.post import posts_bp
 from routes.user import users_bp
 from routes.like import like_bp
+from routes.follow import follow_bp
 
 load_dotenv()
 
@@ -18,6 +20,7 @@ CORS(app)
 app.register_blueprint(posts_bp)
 app.register_blueprint(users_bp)
 app.register_blueprint(like_bp)
+app.register_blueprint(follow_bp)
 
 url = os.getenv("DB_URL")
 
