@@ -8,6 +8,7 @@ from routes.post import posts_bp
 from routes.user import users_bp
 from routes.like import like_bp
 from routes.follow import follow_bp
+from routes.comment import comments_bp
 
 load_dotenv()
 
@@ -21,6 +22,7 @@ app.register_blueprint(posts_bp)
 app.register_blueprint(users_bp)
 app.register_blueprint(like_bp)
 app.register_blueprint(follow_bp)
+app.register_blueprint(comments_bp)
 
 url = os.getenv("DB_URL")
 
