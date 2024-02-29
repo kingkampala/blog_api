@@ -16,7 +16,7 @@ def execute_query(query):
     connection.close()
 
 class Post:
-    def __init__(self, title, content, id):
+    def __init__(self, title, content, id=None):
         self.title = title
         self.content = content
         self.id = id
